@@ -26,6 +26,7 @@ class Atividade(models.Model):
     descricao = models.CharField(max_length=500,null = True,blank = True) 
     hora_inicio = models.TimeField()
     hora_fim = models.TimeField()
+    tipo = models.CharField(max_length=20)
     eventos = models.ForeignKey(Evento,on_delete=models.CASCADE)
     responsavel = models.ForeignKey(Participante,on_delete=models.CASCADE)
 
