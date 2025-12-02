@@ -9,7 +9,7 @@ class EventoViewSet(viewsets.ModelViewSet):
 
 class ParticipanteViewSet(viewsets.ModelViewSet):
     queryset = Participante.objects.all() 
-    serializer_class = Participante.Serializer 
+    serializer_class = ParticipanteSerializer
     filter_backends = [DjangoFilterBackend] 
  
     filterset_fields = ['nome', 'email', 'celular', 'tipo']

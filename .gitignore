@@ -1,0 +1,70 @@
+# Arquivos e pastas do Python
+##########################
+# Byte-code
+*.py[co]
+__pycache__/
+migrations/
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+/bin/
+/include/
+/lib/
+/lib64/
+/Scripts/
+/share/
+
+# Arquivos de dados gerados
+*.egg
+*.whl
+dist/
+build/
+pip-log.txt
+pip-delete-this-arg.txt
+
+# Editor e IDE
+##############
+# VS Code
+.vscode/
+# PyCharm
+.idea/
+# Outros
+*.sublime-workspace
+*.DS_Store
+Thumbs.db
+
+# Configurações do Django
+#######################
+# Arquivo de configurações secretas (se usado)
+# Certifique-se de não commitar chaves secretas, tokens ou credenciais!
+# Um arquivo para variáveis de ambiente é comum (ex: .env)
+.env
+.local.env
+settings_local.py
+local_settings.py
+
+# Banco de Dados
+################
+# SQLite database (se usado - o arquivo padrão é db.sqlite3)
+db.sqlite3
+
+# Arquivos de Mídia e Estáticos
+##############################
+# Arquivos de mídia enviados pelo usuário (media files)
+# Estes devem ser gerenciados fora do repositório Git em produção.
+/media/
+
+# Arquivos estáticos coletados (STATIC_ROOT)
+# Gerados pelo `python manage.py collectstatic` e não devem ser versionados.
+/static_root/
+/staticfiles/
+# Ou, se for um nome diferente
+/production_static/
+
+# Logs e Dados Temporários
+##########################
+*.log
+*.tmp
+*~
