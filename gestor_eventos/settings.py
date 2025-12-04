@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+import inspect 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -40,7 +41,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_filters',
     'eventos',
-    ]
+    'rest_framework.authtoken',
+    'drf_spectacular',
+]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -125,10 +128,61 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.AllowAny',
-    ],
-    'DEFAULT_FILTER_BACKENDS': [
-        'django_filters.rest_framework.DjangoFilterBackend',
-    ],
+ 'DEFAULT_AUTHENTICATION_CLASSES': [
+ 'rest_framework.authentication.TokenAuthentication',
+ 'rest_framework.authentication.SessionAuthentication',
+ ],
+ 'DEFAULT_PERMISSION_CLASSES': [
+ 'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+ ],
+ 'DEFAULT_FILTER_BACKENDS': [
+ 'django_filters.rest_framework.DjangoFilterBackend',
+
+ ],
+ 'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema', 
+}
+
+SPECTACULAR_SETTINGS = {
+'TITLE': 'gestor_eventos',
+'DESCRIPTION': inspect.cleandoc("""
+## Bem-vindo à gestor_eventos!  
+                             
+ ### Eventos
+- **Listar eventos** (`GET /api/eventos/`) sem autenticação
+- **Criar eventos** (`POST /api/eventos/`) com autenticação
+- **Atualizar eventos** (`PUT/PATCH /api/eventos/{id}/`) com autenticação
+- **Excluir eventos** (`DELETE /api/eventos/{id}/`) com autenticação
+        
+### Participantes
+- **Listar participantes** (`GET /api/participantes/`) sem autenticação
+- **Criar participantes** (`POST /api/participantes/`) com autenticação
+- **Atualizar participantes** (`PUT/PATCH /api/participantes/{id}/`) com autenticação
+- **Excluir participantes** (`DELETE /api/participantes/{id}/`) com autenticação
+                                 
+ ### Atividades
+- **Listar atividades** (`GET /api/atividades/`) sem autenticação
+- **Criar atividades** (`POST /api/atividades/`) com autenticação
+- **Atualizar atividades** (`PUT/PATCH /api/atividades/{id}/`) com autenticação
+- **Excluir atividades** (`DELETE /api/atividades/{id}/`) com autenticação
+
+                         
+ ### Autenticação
+ Use o endpoint `/api/token/` para obter seu token e inclua no cabeçalho:
+
+ Authorization: Token <sua_chave>
+ ```
+ """),
+ 'VERSION': '1.0.0',
+ 'SERVE_INCLUDE_SCHEMA': False,
+ 'SECURITY': [{'TokenAuth': []}],
+ 'COMPONENTS': {
+ 'securitySchemes': {
+ 'TokenAuth': {
+ 'type': 'apiKey',
+ 'in': 'header',
+ 'name': 'Authorization',
+ 'description': 'Use o formato: Token <sua_chave>',
+ },
+ },
+ },
 }
