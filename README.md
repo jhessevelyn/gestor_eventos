@@ -1,14 +1,33 @@
-# 🎟️ Sistema de Gestão de Eventos - Django REST API
+# 🎟️ Sistema de Gestão de Eventos
 
-> **Projeto Integrador** - API Backend desenvolvida em Django REST Framework
+API Django REST para gerenciamento de eventos acadêmicos.
 
-**Professor:** Henrique Freitas 
-**Disciplina:** Projeto Integrador 6 
+## 📋 Funcionalidades
+- Cadastro de eventos, participantes e atividades
+- Relacionamentos 1:N, N:N e 1:1
+- Autenticação
+- Dashboard completo de eventos
 
----
+## 🚀 Instalação Rápida
 
-## 📋 Índice
-- [Sobre o Projeto](#sobre-o-projeto)
-- [Instalação](#instalação)
-- [Rotas da API](#rotas-da-api)
+```bash
+# Clone o repositório
+git clone [seu-repositorio]
 
+# Entre na pasta
+cd gestor_eventos
+
+# Crie ambiente virtual
+python -m venv venv
+
+# Ative (Windows)
+venv\Scripts\activate
+
+# Instale dependências
+pip install django djangorestframework
+
+# Execute migrações
+python manage.py migrate
+
+# Rode o servidor
+python manage.py runserver
