@@ -103,3 +103,41 @@ Desenvolver uma API Backend com autenticação para gerenciar eventos, participa
 ```bash
 python --version
 pip --version
+
+Configuração do Ambiente
+Siga os passos abaixo para configurar o ambiente local.
+
+Clone o repositório:
+
+git clone https://github.com/usuario/projeto_api.git
+cd projeto_api
+Crie um ambiente virtual:
+
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate     # Windows
+Instale as dependências:
+
+pip install -r requirements.txt
+Configure as variáveis de ambiente:
+
+cp .env.example .env
+# Edite .env com suas credenciais
+Aplique as migrações e inicie o servidor:
+
+python manage.py migrate
+python manage.py runserver
+Deploy(opcional)
+Plataforma Recomendada: [Render / Railway / AWS]
+Prepare o Procfile:
+
+web: gunicorn projeto.wsgi:application --log-file -
+Configure variáveis de ambiente na plataforma de deploy.
+
+Execute migrações em produção:
+
+python manage.py migrate
+Colete arquivos estáticos (se aplicável):
+
+python manage.py collectstatic
+
