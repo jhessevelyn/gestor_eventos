@@ -1,4 +1,4 @@
-# Sistema de Gestão de Eventos - API Django REST
+🐱‍🏍# Sistema de Gestão de Eventos - API Django REST
 
 ![Python](https://img.shields.io/badge/Python-3.11%2B-blue)
 ![Django](https://img.shields.io/badge/Django-5.0-green)
