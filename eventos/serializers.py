@@ -30,3 +30,4 @@ class InscricaoSerializer(serializers.Serializer):
     participante = serializers.PrimaryKeyRelatedField(
         queryset = Participante.objects.all()
     )
+

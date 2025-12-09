@@ -68,8 +68,10 @@ class AtividadeViewSet(viewsets.ModelViewSet):
     queryset = Atividade.objects.all() 
     serializer_class = AtividadeSerializer
 
-    @action(detail=True, methods=['get'])
+    @action(detail=True, methods=['get', 'put'],serializer_class =  ParticipanteSerializer)
     def responsavel(self, request, pk=None):
         atividade = self.get_object()
-        serializer = ParticipanteSerializer(atividade.responsavel)
+        if request.method == 'GET':
+             serializer = ParticipanteSerializer(atividade.responsavel)
         return Response(serializer.data)
+
