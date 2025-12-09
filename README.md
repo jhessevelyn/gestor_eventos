@@ -119,6 +119,7 @@ python -m venv venv
 source venv/bin/activate  # Linux/Mac
 venv\Scripts\activate     # Windows
 ```
+
 Instale as dependências:
 
 pip install -r requirements.txt
@@ -142,11 +143,6 @@ Execute migrações em produção:
 
 python makemigrations eventos
 python manage.py migrate
-```
+
 Criar um superadmin: python manage.py createsuperuser
 Criar o servidor: python manage.py runserver
-```
-Colete arquivos estáticos (se aplicável):
-
-python manage.py collectstatic
-
