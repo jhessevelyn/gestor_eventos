@@ -75,3 +75,31 @@ Desenvolver uma API Backend com autenticação para gerenciar eventos, participa
 - **Business Layer**: Views e Serializers
 - **Data Layer**: Models Django
 - **Auth Layer**: JWT Authentication
+
+- ## Tecnologias
+
+### Backend
+- Python 3.11+
+- Django 5.0
+- Django REST Framework 3.15
+- Simple JWT 5.3
+
+### Banco de Dados
+- SQLite (desenvolvimento)
+- PostgreSQL (produção)
+
+### Ferramentas
+- Git
+- VS Code
+
+## Pré-requisitos
+
+- Python 3.11 ou superior
+- Pip (gerenciador de pacotes)
+- Git (opcional)
+- 500MB de espaço livre
+
+### Verificação
+```bash
+python --version
+pip --version
