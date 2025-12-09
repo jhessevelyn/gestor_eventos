@@ -1,4 +1,4 @@
-# 🎟️ Sistema de Gestão de Eventos
+🎟️ Sistema de Gestão de Eventos
 
 API Django REST para gerenciamento de eventos acadêmicos.
 
@@ -33,37 +33,37 @@ python manage.py migrate
 python manage.py runserver
 
 
-## 🎯 Funcionalidades
+🎯 Funcionalidades
 
-### 📅 Gestão de Eventos
+📅 Gestão de Eventos
 - Criar, ler, atualizar e excluir eventos
 - Campos: nome, descrição, datas, local
 - Validação de datas e campos obrigatórios
 
-### 👥 Gestão de Participantes
+👥 Gestão de Participantes
 - CRUD completo de participantes
 - Tipos: estudante, palestrante, convidado
 - Inscrição em múltiplos eventos
 
-### 🎪 Gestão de Atividades
+🎪 Gestão de Atividades
 - Atividades por evento (palestras, workshops)
 - Designação de responsável
 - Controle de horários e tipos
 
-### 🔗 Relacionamentos
+🔗 Relacionamentos
 - **1:N** - Evento → Atividades
 - **N:N** - Evento ↔ Participantes
 - **1:1** - Atividade → Responsável
 
 
-## 🛠️ Tecnologias
+🛠️ Tecnologias
 
-### Backend
+Backend
 - **Python 3.11+** - Linguagem principal
 - **Django 5.0** - Framework web
 - **Django REST Framework** - API REST
 - **SQLite** - Banco de dados (desenvolvimento)
 
-### Ferramentas
+Ferramentas
 - **VS Code** - Editor
 - **Git** - Controle de versão
