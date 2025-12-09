@@ -138,11 +138,10 @@ Prepare o Procfile:
 
 web: gunicorn projeto.wsgi:application --log-file -
 Configure variáveis de ambiente na plataforma de deploy.
-```
-Execute migrações em produção:
 
+Execute migrações em produção:
+```bash
 python makemigrations eventos
 python manage.py migrate
-
 Criar um superadmin: python manage.py createsuperuser
 Criar o servidor: python manage.py runserver
