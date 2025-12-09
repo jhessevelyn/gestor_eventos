@@ -1,134 +1,106 @@
-🐱‍🏍 Sistema de Gestão de Eventos - API Django REST
 
-![Python](https://img.shields.io/badge/Python-3.11%2B-blue)
-![Django](https://img.shields.io/badge/Django-5.0-green)
-![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-orange)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+# API Projeto Django
 
-> API RESTful para gestão completa de eventos, participantes e atividades. Desenvolvida como Projeto Integrador.
+[![Python](https://img.shields.io/badge/Python-3.12%2B-blue.svg?logo=python)](https://www.python.org/downloads/)
+[![Django](https://img.shields.io/badge/Django-5.0%2B-green.svg?logo=Django)](https://www.djangoproject.com/)
+[![SQLite](https://img.shields.io/badge/SQLite-003B57.svg?logo=sqlite&logoColor=white)](https://www.sqlite.org/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Índice
 
-- [Sobre o Projeto](#sobre-o-projeto)
-- [Objetivos](#objetivos)
-- [Funcionalidades](#funcionalidades)
-- [Arquitetura](#arquitetura)
-- [Tecnologias](#tecnologias)
-- [Pré-requisitos](#pré-requisitos)
-- [Instalação](#instalação)
-- [Execução](#execução)
-- [Testes](#testes)
-- [Rotas da API](#rotas-da-api)
-- [Autenticação](#autenticação)
-- [Modelo de Dados](#modelo-de-dados)
+
+
+## Instituições de Fomento e Parceria
+[![Website IFB](https://img.shields.io/badge/Website-IFB-%23508C3C.svg?labelColor=%23C8102E)](https://www.ifb.edu.br/) 
+[![Website ihwbr](https://img.shields.io/badge/Website-ihwbr-%23DAA520.svg?labelColor=%232E2E2E)](https://hardware.org.br/)
+
+## Sumário
+
+- [Visão Geral](#visão-geral)
+- [Pacotes Utilizados](#pacotes-utilizados)
 - [Estrutura do Projeto](#estrutura-do-projeto)
-- [Diagramas](#diagramas)
-- [Contribuição](#contribuição)
-- [Licença](#licença)
-- [Professor](#professor)
+- [Diagrama de Banco de Dados](#diagrama-de-banco-de-dados)
+- [Documentação da API](#documentação-da-api)
+- [Configuração do Ambiente](#configuração-do-ambiente)
+- [Deploy](#deploy)
 
-## Sobre o Projeto
+## Visão Geral
 
-O **Sistema de Gestão de Eventos** é uma API desenvolvida em Django REST Framework para gerenciar eventos acadêmicos e corporativos. A solução permite o cadastro de eventos, participantes e atividades, com relacionamentos bem definidos entre as entidades.
+Forneça uma descrição concisa do propósito da API, seus objetivos principais e o problema que resolve. Inclua informações sobre o domínio de aplicação, público-alvo e funcionalidades de alto nível.
 
-**Contexto:** Muitos organizadores de eventos ainda utilizam planilhas e formulários desconexos, o que gera falhas e dificuldade de gestão.
+## Pacotes Utilizados
 
-**Solução:** Centralizar todas as operações em uma API robusta e escalável.
+Liste todos os pacotes Python necessários, com versões recomendadas. Utilize um formato de tabela para maior clareza.
 
-## Objetivos
+| Pacote                  | Versão       | Descrição                                      |
+|-------------------------|--------------|------------------------------------------------|
+| Django                  | >=5.0        | Framework web principal                        |
+| djangorestframework     | latest       | Toolkit para construção de APIs REST           |
+| psycopg2-binary         | latest       | Adaptador PostgreSQL                           |
+| django-environ          | latest       | Gerenciamento de variáveis de ambiente         |
+| drf-yasg                | latest       | Geração automática de documentação Swagger     |
+| ...                     | ...          | ...                                            |
 
-### Objetivo Geral
-Desenvolver uma API Backend com autenticação para gerenciar eventos, participantes, atividades e seus relacionamentos.
+> **Nota:** Consulte o arquivo `requirements.txt` para a lista completa e versões exatas.
 
-### Objetivos Específicos
-- Modelar entidades: Evento, Participante e Atividade
-- Implementar relacionamentos: 1:N, N:N e 1:1
-- Criar CRUD completo para todas as entidades
-- Implementar sistema de autenticação
-- Desenvolver rotas de relacionamento (mínimo 3)
-- Criar rota composta A-B-C (dashboard)
+## Estrutura do Projeto
 
-## Funcionalidades
+Apresente a organização dos diretórios e arquivos principais. Utilize uma árvore de diretórios para visualização clara.
 
-### Gestão de Eventos
-- Criar, listar, atualizar e excluir eventos
-- Campos: nome, descrição, data_início, data_fim, local
-
-### Gestão de Participantes
-- CRUD de participantes com tipos: estudante, palestrante, convidado
-- Inscrição em múltiplos eventos (N:N)
-
-### Gestão de Atividades
-- Gerenciamento de atividades por evento
-- Designação de responsável (1:1)
-- Tipos: workshop, palestra, oficina
-
-### Relacionamentos
-- **1:N** - Evento → Atividade
-- **N:N** - Evento ↔ Participante
-- **1:1** - Atividade → Participante (responsável)
-
-## Arquitetura
-
-**Camadas:**
-- **API Layer**: Endpoints REST
-- **Business Layer**: Views e Serializers
-- **Data Layer**: Models Django
-- **Auth Layer**: JWT Authentication
-
-- ## Tecnologias
-
-### Backend
-- Python 3.11+
-- Django 5.0
-- Django REST Framework 3.15
-- Simple JWT 5.3
-
-### Banco de Dados
-- SQLite (desenvolvimento)
-- PostgreSQL (produção)
-
-### Ferramentas
-- Git
-- VS Code
-
-## Pré-requisitos
-
-- Python 3.11 ou superior
-- Pip (gerenciador de pacotes)
-- Git (opcional)
-- 500MB de espaço livre
-
-### Verificação
-```bash
-python --version
-pip --version
-````
-Configuração do Ambiente
-Siga os passos abaixo para configurar o ambiente local.
-
-Clone o repositório:
-```bash
-git clone https://github.com/usuario/projeto_api.git
-Para clonar uma branch específica diretamente, use:
-
-git clone -b nome-da-branch --single-branch url-do-repositorio.git
-```bash
-Crie um ambiente virtual:
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
+```
+projeto_api/
+├── manage.py
+├── requirements.txt
+├── .env.example
+├── projeto/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── apps/
+│   ├── core/
+│   │   ├── models.py
+│   │   ├── views.py
+│   │   ├── serializers.py
+│   │   └── urls.py
+│   └── ...
+├── docs/
+│   └── database_diagram.png
+└── scripts/
+    └── deploy.sh
 ```
 
-Instale as dependências:
+Descreva brevemente o propósito de cada diretório e módulo relevante.
 
-pip install -r requirements.txt
-Configure as variáveis de ambiente:
+## Diagrama de Banco de Dados
 
-cp .env.example .env
-```bash
-# Edite .env com suas credenciais
-Aplique as migrações e inicie o servidor:
+![Diagrama de Banco de Dados](./docs/database_diagram.png)
+
+> **Descrição:** Inclua um diagrama ER (Entidade-Relacionamento) gerado por ferramentas como `django-extensions` ou `pygraphviz`. Descreva as principais entidades, relacionamentos e campos críticos.
+
+## Documentação da API
+
+A documentação interativa está disponível em `/api/docs/` (Swagger UI) ou `/api/redoc/` (ReDoc) no ambiente de desenvolvimento.
+
+### Endpoints Principais
+
+| Método | Endpoint              | Descrição                          | Autenticação |
+|--------|-----------------------|------------------------------------|--------------|
+| GET    | `/api/items/`         | Lista todos os itens               | Opcional     |
+| POST   | `/api/items/`         | Cria um novo item                  | Requerida    |
+| GET    | `/api/items/{id}/`    | Recupera um item específico        | Opcional     |
+| ...    | ...                   | ...                                | ...          |
+
+> **Detalhes:** Consulte a interface Swagger para schemas de request/response, parâmetros e exemplos.
+
+## Configuração do Ambiente
+
+Siga os passos abaixo para configurar o ambiente local.
+
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/usuario/projeto_api.git
+   cd projeto_api
+   ```
 
 python manage.py migrate
 python manage.py runserver
