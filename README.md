@@ -104,7 +104,3 @@ Desenvolver uma API Backend com autenticação para gerenciar eventos, participa
 python --version
 pip --version
 
-### Instalação
-```bash
-git clone https://github.com/seu-usuario/gestor-eventos.git
-cd gestor-eventos
