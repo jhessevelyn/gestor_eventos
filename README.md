@@ -1,5 +1,8 @@
 # gestor_eventos
 
+### Orientador Henrique Pereira de Freitas Filho
+Contato:  henrique.filho@ifb.edu.br
+
 
 🐱‍🏍 Sistema de Gestão de Eventos - API Django REST
 
@@ -18,6 +21,7 @@
 - [Arquitetura](#arquitetura)
 - [Tecnologias](#tecnologias)
 - [Pré-requisitos](#pré-requisitos)
+- [Verificação] (#Verificação)
 - [Instalação](#instalação)
 - [Execução](#execução)
 - [Testes](#testes)
@@ -25,8 +29,8 @@
 - [Autenticação](#autenticação)
 - [Modelo de Dados](#modelo-de-dados)
 - [Estrutura do Projeto](#estrutura-do-projeto)
-- [Documentação da API]
-- [Configuração do Ambiente]
+- [Documentação da API] (#documentação-da-api)
+- [Configuração do Ambiente] (#configuração_do-ambiente)
 - [Diagramas](#diagramas)
 - [Contribuição](#contribuição)
 - [Licença](#licença)
@@ -105,24 +109,59 @@ Desenvolver uma API Backend com autenticação para gerenciar eventos, participa
 python --version
 pip --version
 
-### Estrutura do Projeto (giovanna)
-eventos/
-├── init.py
-├── admin.py
-├── apps.py
-├── models.py
-├── serializers.py
-├── tests.py
-├── views.py
-├── gestor_eventos/
-│   │   ├──init.py
-│   │   ├── asgi.py
-│   │   ├── settings.py
-│   │   ├── urls.py
-│   │   └── wsgi.py
-└── scripts/
-    └── deploy.sh
-Descreva brevemente o propósito de cada diretório e módulo relevante.
+
+### Diagrama de Banco de Dados
+
+Endpoints Principais
+Método	Endpoint	Descrição	Autenticação
+GET	/api/items/	Lista todos os itens	Opcional
+POST	/api/items/	Cria um novo item	Requerida
+GET	/api/items/{id}/	Recupera um item específico	Opcional
+
+### Configuração do Ambiente
+Siga os passos abaixo para configurar o ambiente local.
+
+## Clone o repositório:
+
+git clone https://github.com/usuario/projeto_api.git
+cd projeto_api
+
+## Crie um ambiente virtual:
+
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate     # Windows
+Instale as dependências:
+
+pip install -r requirements.txt
+
+## Configure as variáveis de ambiente:
+
+cp .env.example .env
+# Edite .env com suas credenciais
+Aplique as migrações e inicie o servidor:
+
+python manage.py migrate
+python manage.py runserver
+
+### Deploy(opcional)
+Plataforma Recomendada: [Render / Railway / AWS]
+Prepare o Procfile:
+
+web: gunicorn projeto.wsgi:application --log-file -
+
+### Configure variáveis de ambiente na plataforma de deploy.
+
+### Execute migrações em produção:
+
+python manage.py migrate
+Colete arquivos estáticos (se aplicável):
+
+python manage.py collectstatic
+CI/CD: Integração com GitHub Actions disponível em .github/workflows/deploy.yml.
+
+
+
 
 
 
