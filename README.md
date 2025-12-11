@@ -15,13 +15,15 @@ Contato:  henrique.filho@ifb.edu.br
 
 ## Índice
 
+- [## Índice]
+
 - [Sobre o Projeto](#sobre-o-projeto)
 - [Objetivos](#objetivos)
 - [Funcionalidades](#funcionalidades)
 - [Arquitetura](#arquitetura)
 - [Tecnologias](#tecnologias)
 - [Pré-requisitos](#pré-requisitos)
-- [Verificação] (#Verificação)
+- [Verificação](#verificação)
 - [Instalação](#instalação)
 - [Execução](#execução)
 - [Testes](#testes)
@@ -29,8 +31,8 @@ Contato:  henrique.filho@ifb.edu.br
 - [Autenticação](#autenticação)
 - [Modelo de Dados](#modelo-de-dados)
 - [Estrutura do Projeto](#estrutura-do-projeto)
-- [Documentação da API] (#documentação-da-api)
-- [Configuração do Ambiente] (#configuração_do-ambiente)
+- [Documentação da API](#documentação-da-api)
+- [Configuração do Ambiente](#configuração-do-ambiente)
 - [Diagramas](#diagramas)
 - [Contribuição](#contribuição)
 - [Licença](#licença)
