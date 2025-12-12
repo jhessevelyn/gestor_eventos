@@ -93,31 +93,45 @@ Certifique-se de ter instalado:
 ```bash
 python --version
 pip --version
+```
 
 🛠️ Instalação e Execução
 Siga os passos abaixo para configurar o ambiente local:
 1. Clone o repositório:
+```
 git clone [https://github.com/usuario/projeto_api.git](https://github.com/usuario/projeto_api.git)
 cd projeto_api
+```
 
 2. Crie e Ative um Ambiente Virtual:
+```
 python -m venv venv
+```
+```
 # Linux/Mac
 source venv/bin/activate  
+```
+```
 # Windows
 venv\Scripts\activate     
-
+```
 3. Instale as Dependências:
+```
 pip install -r requirements.txt
-
+````
 4. Configure as Variáveis de Ambiente:
+```
 cp .env.example .env
-
-5. Aplique as Migrações e Inicie o Servidor:
+```
+6. Aplique as Migrações e Inicie o Servidor:
+```
 python manage.py migrate
+```
+```
 python manage.py runserver
+```
 
-O servidor estará acessível em http://127.0.0.1:8000/.
+O servidor estará acessível em ```http://127.0.0.1:8000/```
 
 6. Rotas Principais da API
 
