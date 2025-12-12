@@ -138,13 +138,14 @@ eventos/
 
 💾 Modelo de Dados (Diagramas)
 
-![Image](https://github.com/user-attachments/assets/2f356d2b-3692-4abe-a847-4e7ec61b764a)
+📂Diagrama Entidade-Relacionamento (DER)
+![Image alt](https://github.com/jhessevelyn/gestor_eventos/blob/52a0ff0605043da8c6e9a770a64d732621a26611/IMG-20251212-WA0028.jpg)
 
-Link para o Diagrama Entidade-Relacionamento (ER)
+📂Diagrama Entidade-Relacionamento (ER)
 
 8. Implementação (Deploy)
 
-FALTA 🛑
+FAlat 
 
 9. Contribuição & Licença
 🤝 Contribuição
