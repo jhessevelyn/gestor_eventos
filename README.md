@@ -15,18 +15,26 @@
 [![Website IFB](https://img.shields.io/badge/Website-IFB-%23508C3C.svg?labelColor=%23C8102E)](https://www.ifb.edu.br/) 
 [![Website ihwbr](https://img.shields.io/badge/Website-ihwbr-%23DAA520.svg?labelColor=%232E2E2E)](https://hardware.org.br/)
 
-## 📚 Índice
-
-* [1. Sobre o Projeto](#1-sobre-o-projeto)
-* [2. Objetivos](#2-objetivos)
-* [3. Tecnologias & Arquitetura](#3-tecnologias--arquitetura)
-* [4. Funcionalidades Detalhadas](#4-funcionalidades-detalhadas)
-* [5. Configuração do Ambiente](#5-configuração-do-ambiente)
-* [6. Rotas Principais da API](#6-rotas-principais-da-api)
-* [7. Estrutura e Modelos](#7-estrutura-e-modelos)
-* [8. Implementação (Deploy)](#8-implementação-deploy)
-* [9. Contribuição & Licença](#9-contribuição--licença)
-
+## 📚 Índice Organizado
+ * 1. Sobre o Projeto
+ * 2. Objetivos
+   * Objetivo Geral
+   * Objetivos Específicos
+ * 3. Tecnologias & Arquitetura
+   * 💻 Tecnologias (Exódos Utilizados)
+   * 🏛️ Arquitetura
+ * 4. Funcionalidades Detalhadas
+ * 5. Configuração do Ambiente
+   * 🔑 Pré-requisitos
+   * 🛠️ Instalação e Execução
+ * 6. Modelo de Dados (Diagramas)
+   * 📂 Diagrama Entidade-Relacionamento (DER)
+   * 📂 Diagrama Entidade-Relacionamento (ER)
+ * 7. Rotas Principais da API
+ * 8. Estrutura e Modelos
+   * 📂 Estrutura do Projeto
+ * 9. Implementação (Deploy)
+ 
 ## 1. Sobre o Projeto
 
 O **Sistema de Gestão de Eventos** é uma API desenvolvida em Django REST Framework para gerenciamento de eventos acadêmicos e corporativos. A solução permite o cadastro de eventos, participantes e atividades, com relacionamentos bem definidos entre as entidades.
@@ -78,14 +86,7 @@ A arquitetura é organizada em camadas :
 | **Atividades** | Gerenciamento de atividades por evento; Tipos: `workshop`, `palestra`, `oficina`. | **1:N** com Participante (Responsável) |
 
 
-## 5. Configuração do Ambiente
-
-### 🔑 Pré-requisitos
-Certifique-se de ter instalado:
-* Python 3.11 ou superior
-* Pip (gerenciador de pacotes)
-
-## 6. 💾 Modelo de Dados (Diagramas)
+## 5. 💾 Modelo de Dados (Diagramas)
 
 ### 📂Diagrama Entidade-Relacionamento (DER)
 ![Image alt](https://github.com/jhessevelyn/gestor_eventos/blob/52a0ff0605043da8c6e9a770a64d732621a26611/IMG-20251212-WA0028.jpg)
@@ -93,8 +94,14 @@ Certifique-se de ter instalado:
 ### 📂Diagrama Entidade-Relacionamento (ER)
 ![Image alt](https://github.com/jhessevelyn/gestor_eventos/blob/e4afbe67a21721ebf6ee495677b1e845427f201c/IMG-20251204-WA0044(1).jpg)
 
+## 6. Configuração do Ambiente
 
-** Verificação Rápida:**
+### 🔑 Pré-requisitos
+Certifique-se de ter instalado:
+* Python 3.11 ou superior
+* Pip (gerenciador de pacotes)
+  
+### Verificação Rápida:
 ```bash
 python --version
 pip --version
@@ -150,6 +157,7 @@ O servidor estará acessível em ```http://127.0.0.1:8000/```
 
 8. Estrutura e Modelos
 📂 Estrutura do Projeto
+```
 eventos/
 ├── __init__.py
 ├── admin.py
@@ -163,21 +171,8 @@ eventos/
 │   ├── settings.py
 │   ├── urls.py
 │   └── wsgi.py
-
+```
 
 9. Implementação (Deploy)
 
 FALTA🛑
-
-10. Contribuição & Licença
-🤝 Contribuição
-
-11. FALTA 🛑
-
-📜 Licença
-
-12. FALTA 🛑
-
-👨‍🏫 Professor/Orientador
-Henrique Pereira de Freitas Filho (henrique.filho@ifb.edu.br)
-
