@@ -114,6 +114,7 @@ pip --version
 
 ### 🛠️ Instalação e Execução
 Siga os passos abaixo para configurar o ambiente local:
+
 6.1 Clone o repositório:
 ```
 git clone [https://github.com/usuario/projeto_api.git](https://github.com/usuario/projeto_api.git)
