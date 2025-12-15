@@ -201,11 +201,6 @@ O deploy da aplicação **gestor_eventos** foi realizado em um servidor **Linux 
 - Emissão e renovação automática do certificado via **Certbot**
 - A aplicação passou a ser acessada de forma segura (HTTPS)
 
-### Resultado
-- API acessível publicamente via domínio
-- Comunicação segura com HTTPS
-- Estrutura simples e funcional, suficiente para demonstração acadêmica do projeto
-
 ```
 https://gestor-eventos.duckdns.org/api/
 
