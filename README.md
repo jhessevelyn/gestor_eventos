@@ -179,4 +179,7 @@ eventos/
 
 ## 9. Implementação (Deploy)
 
-FALTA🛑
+```
+(https://gestor-eventos.duckdns.org/api/)
+
+```
