@@ -33,7 +33,7 @@
     * [Verificação Rápida](#verificação-rápida)
     * [ Instalação e Execução](#️-instalação-e-execução)
 * [7. Rotas Principais da API](#7-rotas-principais-da-api)
-* [8. Estrutura e Modelos](#8-estrutura-e-modelos)
+* [8. Estrutura](#8-estrutura)
     * [ Estrutura do Projeto](#-estrutura-do-projeto)
 * [9. Implementação (Deploy)](#9-implementação-deploy)
 
@@ -159,7 +159,7 @@ O servidor estará acessível em ```http://127.0.0.1:8000/api``` ou ```http://lo
 | POST | /api/auth/token/ | Obter Token JWT | Não Aplicável |
 | GET | /api/dashboard/ | Rota Composta A-B-C (Visão Gerencial) | Requerida |
 
-## 8. Estrutura e Modelos
+## 8. Estrutura 
 ### 📂 Estrutura do Projeto
 ```
 eventos/
@@ -179,4 +179,6 @@ eventos/
 
 ## 9. Implementação (Deploy)
 
-FALTA🛑
+```
+https://gestor-eventos.duckdns.org/api/
+```
